@@ -9,6 +9,7 @@
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
 }
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 
 /*
  * Base structure
@@ -26,6 +27,12 @@ body {
 /*
  * Header
  */
+
+h1,
+h2,
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+}
 
 .nav-masthead .nav-link {
   padding: 0.25rem 0;

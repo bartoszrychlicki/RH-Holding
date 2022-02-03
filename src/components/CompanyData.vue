@@ -11,31 +11,33 @@
       <p>KRS: 0000880190<br />NIP: 957-11-30-261</p>
       <p>
         <strong>Dane kontaktowe:</strong><br />
-        kontakt@rychlickiholding.com
+        <Popper content="Adres skopiowany do schowka.">
+          <i
+            v-on:click.prevent="
+              copyToClipboard('kontakt@rychlickiholding.com', $event)
+            "
+            class="bi bi-clipboard"
+          >
+            kontakt@rychlickiholding.com</i
+          >
+        </Popper>
       </p>
       <p>
         <strong>Faktury prosimy wysyłać na adres:</strong><br />
-        <a href="#" v-on:click.prevent="copyEmailToClipboard()"
-          >ksiegowosc@rychlickiholding.com</a
-        >
-      </p>
-
-      <p class="lead">
-        <a
-          href="#"
-          class="btn btn-lg btn-secondary fw-bold border-white bg-white"
-          >Learn more</a
-        >
+        <Popper content="Adres skopiowany do schowka.">
+          <i
+            v-on:click.prevent="
+              copyToClipboard('ksiegowosc@rychlickiholding.com', $event)
+            "
+            class="bi bi-clipboard"
+          >
+            ksiegowosc@rychlickiholding.com
+          </i>
+        </Popper>
       </p>
     </main>
 
-    <footer class="mt-auto text-white-50">
-      <p>
-        Cover template for
-        <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by
-        <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.
-      </p>
-    </footer>
+    <footer class="mt-auto text-white-50"></footer>
   </div>
 </template>
 
@@ -53,11 +55,23 @@ export default {
     HeaderMenu,
   },
   methods: {
-    copyEmailToClipboard() {
-      copy('tekst123');
+    copyToClipboard(email, event) {
+      copy(email);
+      event.preventDefault();
     },
   },
 };
 </script>
 
-<style></style>
+<style>
+:root {
+  --popper-theme-background-color: #747474;
+  --popper-theme-background-color-hover: #333333;
+  --popper-theme-text-color: #ffffff;
+  --popper-theme-border-width: 0px;
+  --popper-theme-border-style: solid;
+  --popper-theme-border-radius: 6px;
+  --popper-theme-padding: 16px;
+  --popper-theme-box-shadow: 0 6px 30px -6px rgba(0, 0, 0, 0.25);
+}
+</style>

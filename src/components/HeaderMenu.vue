@@ -1,7 +1,10 @@
 <template>
   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0">Rychlicki Holding</h3>
+      <h3 class="float-md-start mb-0">
+        <img src="@/assets/logo.png" width="32" height="32" />
+        Rychlicki Holding
+      </h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link active" aria-current="page" href="#"
           >Dane kontaktowe</a
